@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "prisma generate",
-    "build": "prisma generate && tsc",
+    "build": "node init && prisma generate && tsc",
     "vercel-build": "prisma generate",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "node init && ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "http-status": "^2.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.5.0",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^8.0.6",
     "zod": "^4.3.6"
   },
